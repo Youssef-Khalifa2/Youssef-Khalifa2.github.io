@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Fluid Scales (utopia.fyi inspired) */
+  /* Step -2: 12px → 13px */
+  --font-xs: clamp(0.75rem, 0.73rem + 0.1vw, 0.81rem);
+  /* Step -1: 14px → 16px */
+  --font-sm: clamp(0.88rem, 0.83rem + 0.22vw, 1rem);
+  /* Step 0: 16px → 20px (Base) */
+  --font-base: clamp(1rem, 0.91rem + 0.43vw, 1.25rem);
+  /* Step 1: 18px → 25px */
+  --font-lg: clamp(1.13rem, 0.98rem + 0.76vw, 1.56rem);
+  /* Step 2: 20px → 31px */
+  --font-xl: clamp(1.25rem, 1.01rem + 1.2vw, 1.94rem);
+  /* Step 3: 23px → 39px */
+  --font-2xl: clamp(1.44rem, 1.09rem + 1.74vw, 2.44rem);
+  /* Step 4: 26px → 48px */
+  --font-3xl: clamp(1.63rem, 1.15rem + 2.39vw, 3rem);
+
+  /* Fluid Spacing */
+  --space-xs: clamp(0.75rem, 0.69rem + 0.33vw, 1rem);
+  --space-s: clamp(1rem, 0.89rem + 0.54vw, 1.41rem);
+  --space-m: clamp(1.5rem, 1.34rem + 0.82vw, 2.11rem);
+  --space-l: clamp(2rem, 1.78rem + 1.09vw, 2.81rem);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Fluid font sizes */
+  --font-size-xs: var(--font-xs);
+  --font-size-sm: var(--font-sm);
+  --font-size-base: var(--font-base);
+  --font-size-lg: var(--font-lg);
+  --font-size-xl: var(--font-xl);
+  --font-size-2xl: var(--font-2xl);
+  --font-size-3xl: var(--font-3xl);
+
+  /* Fluid spacing */
+  --spacing-fluid-xs: var(--space-xs);
+  --spacing-fluid-s: var(--space-s);
+  --spacing-fluid-m: var(--space-m);
+  --spacing-fluid-l: var(--space-l);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* Prevent double scrollbars since we use snap-container */
+}
