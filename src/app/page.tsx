@@ -250,8 +250,8 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-4 md:gap-fluid-m text-[10px] md:text-[11px] font-mono uppercase tracking-[0.2em] text-zinc-400">
               <a href="https://github.com/Youssef-Khalifa2" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>
-              <a href="https://linkedin.com/in/youssefkhalifa" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
-              <a href="mailto:your-email@example.com" className="hover:text-white transition-colors">Contact</a>
+              <a href="https://www.linkedin.com/in/youssef-khalifa-862523253/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+              <a href="mailto:youssefkhalifa458@gmail.com" className="hover:text-white transition-colors">Contact</a>
             </div>
           </div>
         </div>
