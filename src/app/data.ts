@@ -12,6 +12,25 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "devops-agent",
+    title: "DevOps Agent",
+    oneLiner: "An autonomous agent executing deterministic DevOps tools triggered directly by intake form completion.",
+    description: "Built an autonomous DevOps Agent that listens for intake form submissions and executes a deterministic suite of platform delivery tools without manual engineering handoffs. Upon form completion, the agent parses and validates specifications into zero-trust parameters, then invokes deterministic tool calls to scaffold enterprise GitHub repositories, provision Azure Bicep infrastructure (KEDA, Container Apps, APIM), register OIDC workload credentials, and configure automated CI/CD pipelines. Features 3-tier risk governance (T1–T3), stat-gated LLM evals via Azure AI Foundry, automated connectivity preflights, and built-in soft/hard kill switches.",
+    moodColor: "#091726",
+    accentColor: "#38bdf8",
+    techStack: ["Agentic Workflows", "Deterministic Tools", "Azure Bicep", "GitHub Actions", "Azure AI Foundry", "OIDC", "Python"],
+    link: "Enterprise Infrastructure Agent",
+    mermaidConfig: `graph TD
+      A[Intake Form Completion] --> B[DevOps Agent Engine]
+      B -->|Tool Call 1| C[Parse & Validate Spec]
+      B -->|Tool Call 2| D[Scaffold Repo & Bicep IaC]
+      B -->|Tool Call 3| E[Register OIDC Workload Auth]
+      B -->|Tool Call 4| F[Deploy UAT & Run Network Preflight]
+      F --> G[Stat-Gated Foundry Eval Suite]
+      G -->|Pass| H[PRD Deployment & OTel Kill-Switch]
+      style B fill:#38bdf8,stroke:#333,stroke-width:2px`,
+  },
+  {
     id: "openflow",
     title: "Openflow",
     oneLiner: "A multi-agent AI ecosystem that autonomously replicates an entire software product team.",

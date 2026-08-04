@@ -42,10 +42,12 @@ next-env.d.ts
 
 # agents & skills
 .agents/
+.claude/
 skills-lock.json
 AGENTS.md
 CLAUDE.md
 GEMINI.md
+skills-lock.json
 
 # personal source assets (moved to public)
 /personal images/
