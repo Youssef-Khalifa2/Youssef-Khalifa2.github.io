@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   oneLiner: string;
   description: string;
+  category: "Agentic & LLMOps" | "MLOps & Infrastructure" | "Computer Vision & Audio";
   moodColor: string;
   accentColor: string;
   techStack: string[];
@@ -14,6 +15,7 @@ export const projects: Project[] = [
   {
     id: "devops-agent",
     title: "DevOps Agent",
+    category: "Agentic & LLMOps",
     oneLiner: "An autonomous agent executing deterministic DevOps tools triggered directly by intake form completion.",
     description: "Built an autonomous DevOps Agent that listens for intake form submissions and executes a deterministic suite of platform delivery tools without manual engineering handoffs. Upon form completion, the agent parses and validates specifications into zero-trust parameters, then invokes deterministic tool calls to scaffold enterprise GitHub repositories, provision Azure Bicep infrastructure (KEDA, Container Apps, APIM), register OIDC workload credentials, and configure automated CI/CD pipelines. Features 3-tier risk governance (T1–T3), stat-gated LLM evals via Azure AI Foundry, automated connectivity preflights, and built-in soft/hard kill switches.",
     moodColor: "#091726",
@@ -33,6 +35,7 @@ export const projects: Project[] = [
   {
     id: "openflow",
     title: "Openflow",
+    category: "Agentic & LLMOps",
     oneLiner: "A multi-agent AI ecosystem that autonomously replicates an entire software product team.",
     description: "Most dev teams are bottlenecked by handoffs. Openflow eliminates them. Contributed to the deployment pipeline and DevOps agent within an enterprise-grade multi-agent system that simulates a complete product organization — business analysts, UI/UX designers, front-end and back-end engineers, all running as coordinated agentic workflows. Built on Azure AI Foundry with orchestrated LLM agents, Openflow doesn't assist developers — it replaces the coordination layer entirely, autonomously driving the software lifecycle from spec to ship.",
     moodColor: "#0f172a",
@@ -52,6 +55,7 @@ export const projects: Project[] = [
   {
     id: "mlops-platform",
     title: "MLOps Platform — 70+ Models",
+    category: "MLOps & Infrastructure",
     oneLiner: "Solo-architected a production MLOps platform from zero — CI/CD, drift monitoring, and LLMOps.",
     description: "No existing infrastructure. No team. Just a mandate to make it work. Built the full MLOps lifecycle from scratch at Power Holding International — CI/CD pipelines via GitHub Actions, container orchestration on Kubernetes (AKS), and experiment tracking with model registry via MLflow on Azure Container Apps. Owns retraining schedules, automated quality gates, and drift detection across 70+ live forecasting and classification models. Extended into LLMOps territory: automated tracing, deployment pipelines, and active guardrails for agentic and LLM-based solutions through Azure AI Foundry.",
     moodColor: "#050d1a",
@@ -70,6 +74,7 @@ export const projects: Project[] = [
   {
     id: "surveillance-intelligence",
     title: "AI Surveillance Intelligence",
+    category: "Computer Vision & Audio",
     oneLiner: "Real-time facial recognition and license plate detection at 30 FPS across 50,000+ residents.",
     description: "Emaar Misr needed a production-grade surveillance system. Designed the full architecture and wrote 75% of the codebase. Built a multi-stage pipeline: face detection → embedding extraction → FAISS similarity search → identity verification, running at 30 FPS with sub-200ms latency. Optimized similarity search from O(n) to O(log n). Deployed as a distributed microservices architecture on FastAPI with async processing. Outcome: security response time cut by 75%, manual monitoring reduced by 90%.",
     moodColor: "#0a0f1e",
@@ -87,6 +92,7 @@ export const projects: Project[] = [
   {
     id: "career-nexus",
     title: "Career Nexus",
+    category: "Agentic & LLMOps",
     oneLiner: "A supervisor-led multi-agent system that optimizes CVs and matches candidates using RAG and self-reflection.",
     description: "Built a full multi-agent orchestration system in LangGraph with a supervisor agent coordinating five specialized critic agents. On the recruiter side, a high-performance RAG pipeline built on Qdrant with a mixed LLM stack (Claude, Mistral) implements self-reflection loops that iterate until candidate matching clears a 90+ quality score threshold. The system doesn't just suggest edits — it generates evidence-backed, role-specific responses and CV optimizations autonomously.",
     moodColor: "#0d1117",
@@ -105,6 +111,7 @@ export const projects: Project[] = [
   {
     id: "emi-chatbot",
     title: "EMI — Emaar Misr Intelligence",
+    category: "Agentic & LLMOps",
     oneLiner: "Natural language to SQL to insight — an agentic BI assistant for enterprise real-estate data.",
     description: "Co-developed an AI-powered BI chatbot enabling any team member to query complex data schemas using plain language. Multi-step agentic framework handling intent detection → entity extraction → SQL generation → data analysis → answer synthesis. Outputs interactive visualizations or exportable CSVs. Data engineering layer joins tables across two separate enterprise systems, built on SQLAlchemy with Apache Spark experimentation for scale.",
     moodColor: "#0f1a2e",
@@ -122,6 +129,7 @@ export const projects: Project[] = [
   {
     id: "nlp-complaint-classification",
     title: "NLP Complaint Classification",
+    category: "MLOps & Infrastructure",
     oneLiner: "BERT + BiLSTM classifier auto-routing 258,000+ support tickets across 158 categories.",
     description: "Built a production complaint classification system using a BiLSTM architecture with BERT embeddings, purpose-built for a long-tail, multilingual category distribution. Hyperparameter optimization via Optuna with 8-worker parallelization. Applied SMOTE to handle severe class imbalance. Integrated directly into Snowflake data warehouse. Final performance: 78% accuracy across all 158 categories, 60% of manual routing eliminated.",
     moodColor: "#0f172a",
@@ -138,6 +146,7 @@ export const projects: Project[] = [
   {
     id: "x-ray-bone-detection",
     title: "X-Ray Bone Abnormality Detection",
+    category: "Computer Vision & Audio",
     oneLiner: "Multiview CNN architectures for patient-level reasoning over per-image classification.",
     description: "Benchmarked single-view vs. multiview CNN architectures on Stanford's MURA dataset. Designed a multiview multimodal architecture treating all images in a patient folder as a unified input, pushing accuracy to 85% compared to 82% for single-view models. This project demonstrates the value of patient-level diagnostic context in medical imaging classifiers.",
     moodColor: "#0a1628",
